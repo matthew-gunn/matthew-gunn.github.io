@@ -21,7 +21,7 @@ function includeHTML(){
 				if(this.readyState == 4){
 					
 					
-					if(this.status == 200){elmnt.innerHTML = this.responsetext;}
+					if(this.status == 200){elmnt.innerHTML = this.responseText;}
 					if(this.status == 404){elmnt.innerHTML = "page not found";}
 					
 					elmnt.removeAttribute("include-html-file");
