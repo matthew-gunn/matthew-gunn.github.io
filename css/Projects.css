@@ -14,7 +14,17 @@ h2{
 .listed{
 	height:100px;
 	width:80%;
+	border:1px solid grey;
 	
+	
+	
+}
+.bargraphic{
+	
+	height:100px;
+	width:100%;
+	object-fit:cover;
+	object-position:0 0;
 	
 	
 }
