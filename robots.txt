@@ -1,0 +1,6 @@
+
+#all bots and spiders
+User-agent: *
+
+#no site access
+Disallow: /
