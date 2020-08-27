@@ -2,42 +2,56 @@
 <html>
 
 <head>
-	<h1 id="header"><a href="../index.html" title="Home" id="homebutton">Project Site</a></h1>
-	<!--links to css and js here:-->
+	<!--metadata - links to css and js here:-->
 	<link rel="stylesheet"type="text/css" href="../css/style.css">
-	<script src="js/script.js"></script>
+	<link rel="stylesheet"type="text/css" href="../css/Home.css">
+	<script src="../js/script.js"></script>
 </head>
-<br>
-<body>
+
+
+
+<body><!-- This is where all text and formatting goes  -->
+
+	<header><!--header of the site-->
+		<a href="index.html" title="Home" id="homebutton"><h2> Matthew Gunn <div id="small"> Project Site</div></h2></a>
+	</header>
 	
-	<div id="sidebar"><h3>
-		<a class="sidebarbutton" href="../index.html" title="Home">Home</a>
-		<br><br>
-		<a class="sidebarbutton" href="../Projects/index.html" title="Projects">Projects</a>
-		<br><br>
-		<a class="sidebarbutton" href="../Files/index.html" title="Files">Files</a>
-		<br><br>
-		<a class="sidebarbutton" href="../About/index.html" title="About">About</a>
-	</h3></div>
+	<div id="body">
+		<div id="sidebar"><h3 id="sidebarh3">
+			<a class="sidebarbutton"  href="../index.html" title="Home"><div class="button" id="sidehome">Home</div></a>
+		
+			<a class="sidebarbutton"  href="../Projects/index.html" title="Projects"><div class="button" id="sideprojects">Projects</div></a>
+		
+			<a class="sidebarbutton"  href="../Files/index.html" title="Files"><div class="button" id="sidefiles">Files</div></a>
+		
+			<a class="sidebarbutton"  href="../About/index.html" title="About"><div class="button" id="sideabout">About</div></a>
+		</h3></div>
 	
 	
-	<div id="main">
-		File Download links and Content.<br>
-		<br>
-		<br>
-		<a href=".">resume_example.pdf</a><br>
-		A current (semi-anonymized) copy of my professional Resume<br>
-		<br>
-		<a href=".">code_example.c</a><br>
-		a fun and useful piece of code, too small for a project page<br>
-		<br>
-		<a href=".">photo_example.jpeg</a><br>
-		a relevent photo<br>
+		<div id="main">
+			<h2 id="maintitle">File Downloads and Content</h2>
+			<br>
+			<br>
+			<a href=".">resume_example.pdf</a><br>
+			A current (semi-anonymized) copy of my professional Resume<br>
+			<br>
+			<a href=".">code_example.c</a><br>
+			a fun and useful piece of code, too small for a project page<br>
+			<br>
+			<a href=".">photo_example.jpeg</a><br>
+			a relevent photo<br>
+			
+		</div>
+	
 	</div>
+
+	<div class="wrapper"></div>
 	
+	<footer>
+		<h4>Mobile Site | About | Analytics</h4>
+		
+	</footer>
 	
 </body>
-
-
 
 </html>
