@@ -1,40 +1,78 @@
-
+/*Head, doc, and Meta Styles*/
 html{
-
 	font-family:arial,sans-serif;
-	background-image:linear-gradient(#6699cc,#add8e6);
-	background-size: cover;
-	height:100%
-
-
-
 }
-
-
-#header{
-	border-bottom:3px solid black;
-	width:100%;
-
-
-}
-
 body{
-
-/*background-image:linear-gradient(#6699cc,#add8e6);
-background-size: cover;
-
-*/
+	margin:0px;
+	background-color:lightgrey;
 }
 
+
+/*Header Styles*/
+header{
+	border-bottom:5px solid #5e8c61;
+	width:100%;
+	position:fixed;
+	height:10vh;
+	background-color:#293a7a;
+	margin-top:-12vh;
+	padding-left:3.5%;
+	
+}
 #homebutton:visited,#homebutton:link,#homebutton:visited:active,#homebutton:link:active{
 /*this covers all iterations of the title*/
 
-color:black;
+color:white;
 text-decoration-line:none;
-
-
 }
 
+/*overall body styles*/
+
+#body{
+margin-top:12vh;
+}
+
+
+/*sidebar styles*/
+
+.button{
+	background-color:#000034;  /*000034,5e8c61*/
+	padding-top:8%;
+	padding-bottom:8%;
+}
+
+#sidebar {
+float: left;
+height:200px;
+width:18%;
+margin:1%;
+margin-top:0%;
+text-align:center;
+}
+
+#sidebarh3{
+	margin-top:0px;
+}
+
+#sidehome{
+	border-radius: 30px	30px 0px 0px;
+}
+
+#sideabout{
+	border-radius: 0px 0px 30px 30px;
+}
+
+.sidebarbutton:visited,.sidebarbutton:link{
+	color:white;
+	text-decoration-line:none;
+}
+
+.sidebarbutton:hover,.sidebarbutton:active{
+	color:#faa916;
+	text-decoration-line:none;
+}
+
+/*Content styles*/
 #main{
 
 float:right;
@@ -43,30 +81,46 @@ margin:1%;
 margin-top:0%;
 padding:3%;
 width:72%;
-
-background-color:lightgrey;
-
-
+background-color:white;
+border-radius:30px;
 }
 
-#sidebar {
-
-float: left;
-
-height:200px;
-width:18%;
-margin:1%;
-margin-top:0%;
-background-color:#000034;
-color:white;
-
-text-align:center;
 
 
+/*footer*/
+.wrapper{
+	
+	
+	height:78vh;
+	width:100%;
+	
+	
 }
 
-.sidebarbutton:visited,.sidebarbutton:link,.sidebarbutton:visited:active,.sidebarbutton:link:active{
-color:white;
-text-decoration-line:none;
-
+footer{
+	
+	
+	width:100%;
+	background-color:#293a7a;
+	height:10vh;
+	position:relative;
+	float:right;
+	bottom:0;
+	color:white;
+	text-align:center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
