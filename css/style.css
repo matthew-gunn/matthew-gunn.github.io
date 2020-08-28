@@ -26,6 +26,17 @@ color:white;
 text-decoration-line:none;
 }
 
+
+
+#maintitle{
+	color:#5e8c61;
+}
+
+#small{
+	display:inline;
+	font-size: .6em;
+}
+
 /*overall body styles*/
 
 #body{
