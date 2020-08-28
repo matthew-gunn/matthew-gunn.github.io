@@ -37,6 +37,15 @@ text-decoration-line:none;
 	font-size: .6em;
 }
 
+#darkmode{
+	position:fixed;
+	top:2vh;
+	right:3vw;
+	height:6vh;
+	width:6vh;
+	
+}
+
 /*overall body styles*/
 
 #body{
