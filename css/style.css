@@ -9,7 +9,7 @@ body{
 
 
 /*Header Styles*/
-header{
+#headertag{
 	border-bottom:5px solid #5e8c61;
 	width:100%;
 	position:fixed;
@@ -17,6 +17,7 @@ header{
 	background-color:#293a7a;
 	margin-top:-12vh;
 	padding-left:3.5%;
+	z-index:1;
 	
 }
 #homebutton:visited,#homebutton:link,#homebutton:visited:active,#homebutton:link:active{
@@ -26,11 +27,6 @@ color:white;
 text-decoration-line:none;
 }
 
-
-
-#maintitle{
-	color:#5e8c61;
-}
 
 #small{
 	display:inline;
@@ -93,6 +89,12 @@ text-align:center;
 }
 
 /*Content styles*/
+
+
+#maintitle{
+	color:#5e8c61;
+}
+
 #main{
 
 float:right;
@@ -114,7 +116,7 @@ border-radius:30px;
 	width:100%;
 }
 
-footer{
+#footertag{
 	width:100%;
 	background-color:#293a7a;
 	height:10vh;
@@ -125,6 +127,61 @@ footer{
 	text-align:center;
 }
 
+
+/*modal popup*/
+#consent-modal-outer{
+	position:fixed;
+	background-color:rgba(.1,.1,.1,.6);
+	height:100%;
+	width:100%;
+	top:0px;
+
+	
+}
+#consent-modal{
+	position:fixed;
+	height:70vh;
+	width:80vw;
+	bottom:15vh;
+	left:10vw;
+	background-color:#293a7a;
+	text-align:center;
+	border-radius:45px;
+	
+}
+#modaltitle{
+	
+	margin-top:40px;
+	margin-bottom:40px;
+	color:#5e8c61;
+	
+}
+#modaltext{
+	color:white;
+}
+
+#consent-yes{
+	margin:10px;
+	padding:2vh;
+	background-color:#5e8c61;
+	height:3vh;
+	border-radius:20px;
+	color:white;
+	cursor:pointer;
+	
+}
+#consent-no{
+	
+	margin:10px;
+	padding:2vh;
+	border-radius:20px;
+	background-color:#5e8c61;
+	height:3vh;
+	color:white;
+	cursor:pointer;
+	font-size:2.15vh;
+	
+}
 
 
 
