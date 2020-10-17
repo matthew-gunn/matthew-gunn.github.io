@@ -93,6 +93,7 @@ text-align:center;
 
 #maintitle{
 	color:#5e8c61;
+	text-align:center;
 }
 
 #main{
@@ -107,6 +108,24 @@ background-color:white;
 border-radius:30px;
 }
 
+.code{
+	margin:10px;
+	padding:8px;
+	background-color:lightgrey;
+	border:1px solid grey;
+	color:black;
+	font-family:Courier;
+	
+}
+
+.link:link, .link:visited{
+	color:grey;
+	
+}
+.link:hover, .link:active{
+	color:#faa916;
+	
+}
 
 
 /*footer*/
