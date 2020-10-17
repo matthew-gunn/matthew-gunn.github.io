@@ -1,0 +1,12 @@
+.LI-profile-badge{
+	float:right;
+	
+}
+.link:link, .link:visited{
+	color:grey;
+	
+}
+.link:hover, .link:active{
+	color:#faa916;
+	
+}
