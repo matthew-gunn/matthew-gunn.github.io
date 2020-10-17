@@ -4,7 +4,7 @@
 <head>
 	<!--metadata - links to css and js here:-->
 	<link rel="stylesheet"type="text/css" href="../css/style.css">
-	<link rel="stylesheet"type="text/css" href="../css/Home.css">
+	<link rel="stylesheet"type="text/css" href="../css/Projects.css">
 	<script async  src="../js/script.js"></script>
 	
 	<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
@@ -36,9 +36,111 @@
 	
 		<div id="main">
 			<h2 id="maintitle">Handheld Mouse Project</h2>
-			<p>Details, Pictures, diagrams, embedded code, and a description</p>
+			<p>The Handheld Mouse Project is a project that I'd been meaning to explore for some time.
+			The idea that I could literally control my computer using some homemade monstrosity was facinating,
+			and the "plug and play" aspect of USB mice and keyboards seemed extraordinarily brilliant.
+			</p>
+			<p>My design goals for this project were to develop something that could replace all of the functions
+			of a USB mouse, without the need for a tabletop. I also wanted to keep accessibility in mind, so my
+			design couldn't rely on any movement other than the hand and fingers. Finally, the design had to be
+			both accurate and efficient: It could not take too long to get across the screen, or misclick any
+			more than a standard mouse.
+			</p>
+			<image src="../assets/hmouse_5.jpg" id="hmouse_5">
+			<p>I decided to build this project on the back of a Pro Micro 32U4MEGA development board. The 32U4
+			board boasted support for Arduino's Mouse.h library, which could communicate as an HID device without
+			external wiring. In addition, the profile of the board was comapratively small, and could fit into a
+			handheld case (or onto a wooden prototype) with ease. Finally, the board was reasonably cheap, at ~$7
+			apiece.
+			</p>
+			<p>Other components of this project included a joystick module (which consists of nothing more that
+			two potentiometers and a pushbutton), several pushbuttons, resistors, and some prototyping jumper
+			wires and breadboards.
+			</p>
+			<p>The Arduino code is not difficult to understand. It is made up of 4 functions which perform the 
+			following overall tasks: 
+			</p>
+			<p>Take input from the Handheld Mouse
+			<p class="code">void loop() {
+			<br>
+			<br>//take all values to check for input
+			<br>int rawxmouse = analogRead(x); 
+			<br>int rawymouse = analogRead(y);
+			<br>int leftclick = digitalRead(left);
+			<br>int rightclick = digitalRead(right);
+			</p>
 			
+			<br>Normalize and map position values to the curve of a power function
+			<p class="code">
+			int joymap(int rawmouse, char axis){
+			<br>/*converts the 0-1023 data from a joystick to up to (-127)-127 data processable by Mouse.move functionality. */
+			<br>/*uses accel value to determine relative mouse velocity  */
+			<br>int normalize = map(rawmouse, 0, 1023, -512, 512); /* change this based on data*/
+			<br>int correct;
+			<br>if (axis == 'x'){
+			<br>	correct = normalize + 13;
+			<br>}
+			<br>else if (axis == 'y'){
+			<br>	correct = normalize + 4;
+			<br>}
+			<br>
+			<br>int cubic = correct*.01 * correct*.01 * correct*.01* correct*.01 * correct*.01;
+			<br>int analogmouse = map(cubic, -3700, 3700,-25,25);
+			<br>return analogmouse;
+			<br>}
+			</p>
 			
+			<br>Determine if button presses are singular or holds
+			<p class="code"> if(digchange(leftclick,oldleftclick) == 1){
+			<br>if(leftclick == HIGH){
+			<br>Mouse.press();
+			<br>Serial.println("LeftClick");
+			<br>}
+			<br>if(leftclick == LOW){
+			<br>Mouse.release();
+			<br>Serial.println("UnLeftClick");
+			<br>}
+			<br>}
+			<br>
+			<br>int digchange(int state, int oldstate){
+			<br>//digital change function. Returns 0 if no change, 1 if change. call before pressing/unpressing button.
+			<br>
+			<br>if(state == oldstate){
+			<br>return 0;
+			<br>}
+			<br>else return 1;
+			<br>}
+			</p>
+			
+			<br>Send data as HID to computer
+			<p class="code">#include &ltMouse.h> 
+			<br>Mouse.move(xmouse,ymouse,0);
+			</p>
+			
+			</p>
+			
+			<p>The final product works exactly as intended. The joystick controls the mouse pointer, speeding up 
+			or slowing down based on the extent that the joystick is pushed. The upper push-button controls the 
+			mouse click, the lower one, the right-click. The mouse has been programmed to send a pressing signal if
+			it detects a continuous push, to mimic the functionality of a standard mouse.
+			</p>
+			
+			<p>
+			<image src="../assets/hmouse_2.jpg" id="hmouse_2">
+			<image src="../assets/hmouse_1.jpg" id="hmouse_1">
+			</p>
+			<div class="spacingline"></div>
+			
+			<p>Aside from removing accessibility and space constraints, the Handheld Mouse is also advantagous in 
+			that it can function as a computer joystick. Upon testing, the project works very well in spaceflight 
+			simulators that any standard mouse would fail in.
+			</p>
+			<p>This project taught me a lot: As well as being one of my first finished projects with an
+			Arduino-based board, I also learned the basics of soldering, and taught myself new skills in programming.
+			</p>
+			<p>The final C++ code has been published under Files as an .ino file.
+			</p>
+			<i>Published 2020 Oct 17.</i>
 		</div>
 	
 	</div>
@@ -46,7 +148,9 @@
 	<div class="wrapper"></div>
 	
 	<footer id="footertag">
-		<h4>Mobile Site | About | Analytics</h4>
+<h4><a class="sidebarbutton" href="https://mobile.matthewgunn.xyz">Mobile Site </a>|
+		<a class="sidebarbutton" href="../About/index.html">About</a> |
+		<a class="sidebarbutton" href="../About/index.html"#contact>Contact</a></h4>
 		
 	</footer>
 	<div id="consent-modal-outer">
