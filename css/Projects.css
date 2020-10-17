@@ -1,30 +1,78 @@
 p{
- margin:6%;
+ margin:2%;
 }
 
-#main {
-	height:350px;
-}
 
-h2{
-	text-align:center;
-	margin:6%;
-}
 
 .listed{
-	height:100px;
-	width:80%;
-	border:1px solid grey;
+	height:150px;
+	width:49%;
+	border:0.5% solid grey;
+	display:inline-block;
+	text-align:right;
+	position:relative;
 	
 	
 	
 }
 .bargraphic{
-	
-	height:100px;
+
+	height:100%;
 	width:100%;
 	object-fit:cover;
-	object-position:0 0;
+	z-index:1;
+
 	
 	
+}
+
+.listedtext{
+
+	color:black;
+	font-weight:bold;
+	position:absolute;
+	font-size:16px;
+	width:100%;
+	bottom:10px;
+	right:10px;
+	
+
+	
+	
+}
+
+.spacingline{
+	width:100%;
+	height:1px;
+	display:block;
+	float:left;
+}
+#hmouse_5{
+	
+	max-width:40%;
+	height:auto;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	border: 1px solid grey;
+}
+#hmouse_2{
+	
+	max-width:30%;
+	margin-left:18%;
+	height:auto;
+
+	display:block;
+	border: 1px solid grey;
+	float:left;
+}
+#hmouse_1{
+	
+	max-width:30%;
+	margin-right:18%;
+	height:auto;
+
+	display:block;
+	border: 1px solid grey;
+	float:right;
 }
