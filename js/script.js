@@ -82,6 +82,15 @@ function checkchange(){
 		document.getElementById("consent-yes").style.backgroundColor = "#7b0f1a";
 		document.getElementById("consent-no").style.backgroundColor = "#7b0f1a";
 		
+		//home colour change
+		if(document.getElementById("featured")!= null && document.getElementById("featured") != undefined){
+			document.getElementById("featured").style.backgroundColor = "#202020";
+			document.getElementById("featuredtitle").style.color = "#7b0f1a";
+			document.getElementById("featureddiv").style.backgroundColor = "black";
+			document.getElementById("featureddiv").style.color = "white";
+			
+		}
+		
 
 
 		
@@ -112,7 +121,14 @@ function checkchange(){
 		document.getElementById("consent-yes").style.backgroundColor = "#5e8c61";
 		document.getElementById("consent-no").style.backgroundColor = "#5e8c61";
 		
-
+		//home colour change
+		if(document.getElementById("featured") != null && document.getElementById("featured") != undefined){
+			document.getElementById("featured").style.backgroundColor = "white";
+			document.getElementById("featuredtitle").style.color = "#5e8c61";
+			document.getElementById("featureddiv").style.backgroundColor = "lightgrey";
+			document.getElementById("featureddiv").style.color = "black";
+			
+		}
 		
 		
 		
