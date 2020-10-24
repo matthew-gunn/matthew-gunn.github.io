@@ -90,8 +90,13 @@ function checkchange(){
 			document.getElementById("featureddiv").style.color = "white";
 			
 		}
-		
-
+		//linkedin
+		if(document.getElementsByClassName("LI-profile-badge")[0]!= null && document.getElementsByClassName("LI-profile-badge") != undefined){
+		var linkedinLight = document.getElementsByClassName("LI-profile-badge")[0];
+		var linkedinDark = document.getElementsByClassName("LI-profile-badge")[1];
+		linkedinLight.style.display = "none";
+		linkedinDark.style.display = "inline";
+		}
 
 		
 		var x = document.getElementsByClassName("button");
@@ -129,6 +134,14 @@ function checkchange(){
 			document.getElementById("featureddiv").style.color = "black";
 			
 		}
+		//linkedin
+		if(document.getElementsByClassName("LI-profile-badge")[0]!= null && document.getElementsByClassName("LI-profile-badge") != undefined){
+		var linkedinLight = document.getElementsByClassName("LI-profile-badge")[0];
+		var linkedinDark = document.getElementsByClassName("LI-profile-badge")[1];
+		linkedinLight.style.display = "inline";
+		linkedinDark.style.display = "none";
+		}
+
 		
 		
 		
