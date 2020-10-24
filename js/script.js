@@ -144,8 +144,12 @@ function checkchange(){
 }
 
 function assigncolorcookie(){
-	
+	if (cookieconsent == 1){
 	setCookie("darkcookie", darkcounter,365);
+	}
+	else{
+	setCookie("darkcookie", darkcounter,0);
+	}
 	console.log("document.cookie=" + document.cookie);
 }
 
