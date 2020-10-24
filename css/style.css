@@ -58,6 +58,7 @@ margin-top:12vh;
 	background-color:#000034;  /*000034,5e8c61*/
 	padding-top:8%;
 	padding-bottom:8%;
+		border:1px solid grey;
 }
 
 #sidebar {
