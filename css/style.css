@@ -1,7 +1,6 @@
 /*Head, doc, and Meta Styles*/
 html{
 	font-family:arial,sans-serif;
-	font-size:2.2vh;
 	overflow-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -13,6 +12,7 @@ body{
 
 /*Header Styles*/
 #headertag{
+	font-size:2.2vh;
 	border-bottom:5px solid #5e8c61;
 	width:100%;
 	position:fixed;
