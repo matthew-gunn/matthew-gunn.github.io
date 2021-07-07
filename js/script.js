@@ -150,7 +150,7 @@ function checkchange(){
 		var x = document.getElementsByClassName("button");
 		var i;
 		for (i = 0; i < x.length; i++) {
-			x[i].style.backgroundColor = "#000034";
+			x[i].style.backgroundColor = "#293a7a";
 		}
 		
 	}
